@@ -21,7 +21,7 @@ namespace POO_Alura
             Console.WriteLine(contaKelvis.agencia);
             Console.WriteLine(contaKelvis.saldo);
 
-            bool resultadoDoSaque = contaKelvis.Sacar(100);
+            bool resultadoDoSaque = contaKelvis.Sacar(1000);
 
             if (resultadoDoSaque)
             {
@@ -29,8 +29,15 @@ namespace POO_Alura
             }
             else
             {
+
+
+
                 Console.WriteLine("O seu saldo e insuficiente, o valor atual e de: $" + contaKelvis.saldo);
             }
+
+            contaKelvis.Depositar(200);
+
+            Console.WriteLine(contaKelvis.saldo);
 
             Console.ReadLine();
         }

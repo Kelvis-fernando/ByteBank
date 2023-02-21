@@ -10,7 +10,16 @@ namespace POO_Alura
     {
         static void Main(string[] args)
         {
-            new ContaCorrente();
+            ContaCorrente contaKelvis = new ContaCorrente();
+            contaKelvis.titular = "Kelvis";
+            contaKelvis.saldo = 1234.5;
+            contaKelvis.numero = 08754;
+            contaKelvis.agencia = 865;
+
+            Console.WriteLine(contaKelvis.titular);
+            Console.WriteLine(contaKelvis.numero);
+            Console.WriteLine(contaKelvis.agencia);
+            Console.WriteLine(contaKelvis.saldo);
 
             Console.ReadLine();
         }

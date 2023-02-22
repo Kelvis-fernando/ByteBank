@@ -10,19 +10,21 @@ namespace POO_Alura
     {
         static void Main(string[] args)
         {
-            ContaCorrente contaFernando = new ContaCorrente();
-            contaFernando.titular = "Fernando";
+            Cliente usuario = new Cliente();
+
+            usuario.nome = "Kelvis";
+            usuario.cpf = "11917646966";
+            usuario.nome = "Desenvolvedor";
 
             ContaCorrente contaKelvis = new ContaCorrente();
-            contaKelvis.titular = "Kelvis";
+            ContaCorrente contaFernando = new ContaCorrente();
+            
+            contaKelvis.titular = usuario;
             contaKelvis.numero = 08754;
             contaKelvis.agencia = 865;
             contaKelvis.saldo = 1000.50;
 
-            Console.WriteLine(contaKelvis.titular);
-            Console.WriteLine(contaKelvis.numero);
-            Console.WriteLine(contaKelvis.agencia);
-            Console.WriteLine(contaKelvis.saldo);
+            Console.WriteLine("Usuario" + contaKelvis.titular);
 
             bool resultadoDoSaque = contaKelvis.Sacar(1000);
 
@@ -43,17 +45,12 @@ namespace POO_Alura
 
             if (resultadoTransferencia)
             {
-                Console.WriteLine("Transferencia feita com sucesso para: " + contaFernando.titular);
                 Console.WriteLine("Saldo da sua conta pos transferencia: " + contaKelvis.saldo);
-                Console.WriteLine("Saldo para " + contaFernando.titular + "Feito com sucesso, saldo atual de: $" + contaFernando.saldo);
             }
             else
             {
                 Console.WriteLine("Erro ao fazer a transferencia, saldo insuficiente: $" + contaKelvis.saldo);
             }
-
-            
-            
 
             Console.ReadLine();
         }

@@ -1,42 +1,46 @@
-﻿using System;
+﻿using POO_Alura;
+using System;
 
-public class ContaCorrente
+namespace POO_Alura
 {
-    public string titular;
-    public int numero;
-    public int agencia;
-    public double saldo = 100.00;
-
-    public bool Sacar(double valor)
+    public class ContaCorrente
     {
-        if (this.saldo < valor)
-        {
-            return false;
-        }
-        else
-        {
-            this.saldo -= valor;
-            return true;
-        }
-    }
+        public Cliente titular;
+        public int numero;
+        public int agencia;
+        public double saldo = 100.00;
 
-    public void Depositar(double valor)
-    {
-        this.saldo += valor;
-    }
-
-    public bool Transferir(double valor, ContaCorrente contaDestino)
-    {
-        if (this.saldo < valor)
+        public bool Sacar(double valor)
         {
-            return false;
+            if (this.saldo < valor)
+            {
+                return false;
+            }
+            else
+            {
+                this.saldo -= valor;
+                return true;
+            }
         }
-        else
-        {
-            this.saldo -= valor;
-            contaDestino.Depositar(valor);
 
-            return true;
+        public void Depositar(double valor)
+        {
+            this.saldo += valor;
+        }
+
+        public bool Transferir(double valor, ContaCorrente contaDestino)
+        {
+            if (this.saldo < valor)
+            {
+                return false;
+            }
+            else
+            {
+                this.saldo -= valor;
+                contaDestino.Depositar(valor);
+
+                return true;
+            }
         }
     }
 }

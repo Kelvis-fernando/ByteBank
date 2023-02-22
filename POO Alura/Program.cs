@@ -12,44 +12,44 @@ namespace POO_Alura
         {
             Cliente usuario = new Cliente();
 
-            usuario.nome = "Kelvis";
-            usuario.cpf = "11917646966";
-            usuario.nome = "Desenvolvedor";
+            usuario.Nome = "Kelvis";
+            usuario.Cpf = "11917646966";
+            usuario.Profissao = "Desenvolvedor";
 
             ContaCorrente contaKelvis = new ContaCorrente();
             ContaCorrente contaFernando = new ContaCorrente();
             
-            contaKelvis.titular = usuario;
-            contaKelvis.numero = 08754;
-            contaKelvis.agencia = 865;
-            contaKelvis.saldo = 1000.50;
+            contaKelvis.Titular = usuario;
+            contaKelvis.Numero = 08754;
+            contaKelvis.Agencia = 865;
+            contaKelvis.Saldo = 1500.50;
 
-            Console.WriteLine("Usuario" + contaKelvis.titular);
+            Console.WriteLine("Usuario: " + contaKelvis.Titular.Nome);
 
             bool resultadoDoSaque = contaKelvis.Sacar(1000);
 
             if (resultadoDoSaque)
             {
-                Console.WriteLine("O seu saldo atual e: $" + contaKelvis.saldo);
+                Console.WriteLine("O seu saldo atual e: $" + contaKelvis.Saldo);
             }
             else
             {
-                Console.WriteLine("O seu saldo e insuficiente, o valor atual e de: $" + contaKelvis.saldo);
+                Console.WriteLine("O seu saldo e insuficiente, o valor atual e de: $" + contaKelvis.Saldo);
             }
 
             contaKelvis.Depositar(200);
 
-            Console.WriteLine("Saldo atual: " + contaKelvis.saldo);
+            Console.WriteLine("Saldo atual: " + contaKelvis.Saldo);
 
             bool resultadoTransferencia = contaKelvis.Transferir(100000, contaFernando);
 
             if (resultadoTransferencia)
             {
-                Console.WriteLine("Saldo da sua conta pos transferencia: " + contaKelvis.saldo);
+                Console.WriteLine("Saldo da sua conta pos transferencia: " + contaKelvis.Saldo);
             }
             else
             {
-                Console.WriteLine("Erro ao fazer a transferencia, saldo insuficiente: $" + contaKelvis.saldo);
+                Console.WriteLine("Erro ao fazer a transferencia, saldo insuficiente: $" + contaKelvis.Saldo);
             }
 
             Console.ReadLine();

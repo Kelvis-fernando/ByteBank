@@ -5,38 +5,52 @@ namespace POO_Alura
 {
     public class ContaCorrente
     {
-        public Cliente titular;
-        public int numero;
-        public int agencia;
-        public double saldo = 100.00;
+        private double _saldo = 100.00;
+
+        public Cliente Titular { get; set; }
+        public int Agencia { get; set; }
+        public int Numero { get; set; }
+        public double Saldo
+        {
+            get { return _saldo; }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Nao e possivel atribuir valores negativos!!");
+                    return;
+                }
+                _saldo = value;
+            }
+        }
 
         public bool Sacar(double valor)
         {
-            if (this.saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
             else
             {
-                this.saldo -= valor;
+                _saldo -= valor;
                 return true;
             }
         }
 
         public void Depositar(double valor)
         {
-            this.saldo += valor;
+            _saldo += valor;
         }
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (this.saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
             else
             {
-                this.saldo -= valor;
+                _saldo -= valor;
                 contaDestino.Depositar(valor);
 
                 return true;

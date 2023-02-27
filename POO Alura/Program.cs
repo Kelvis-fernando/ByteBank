@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POO_Alura.Employees;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,11 @@ namespace POO_Alura
             }
 
             Console.WriteLine("Total de contas criadas: " + ContaCorrente.TotalDeContasCriadas);
+
+            ////////////////////////////////////
+            
+            Funcionario novoFuncionario = new Funcionario("Joao", "12345678955", 5000.50);
+            Console.WriteLine("Bonificacao funcionario: " + novoFuncionario.GetBonificacao());
 
             Console.ReadLine();
         }

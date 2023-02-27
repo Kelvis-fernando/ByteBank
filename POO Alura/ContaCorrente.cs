@@ -10,7 +10,7 @@ namespace POO_Alura
         public int Agencia { get; set; }
         public int Numero { get; set; }
         public static int TotalDeContasCriadas { get; private set; }
-
+        
         public ContaCorrente(int agencia, int numero, double saldo, Cliente titular)
         {
             Agencia = agencia;

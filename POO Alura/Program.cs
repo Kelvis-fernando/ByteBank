@@ -12,10 +12,12 @@ namespace POO_Alura
         {
             Cliente usuario1 = new Cliente("Kelvis", "11917646966", "Desenvolvedor");
             Cliente usuario2 = new Cliente("Fernando", "12354267899", "Contador");
+            Cliente usuario3 = new Cliente("Fernando", "12354267899", "Contador");
 
             ContaCorrente contaKelvis = new ContaCorrente(864, 987653, 1200.40, usuario1);
             ContaCorrente contaFernando = new ContaCorrente(864, 0098763, 500.50, usuario2);
-           
+            ContaCorrente contaTeste = new ContaCorrente(864, 0098763, 500.50, usuario3);
+
 
             Console.WriteLine("Agencia e conta: " + contaKelvis.Agencia + " " + contaKelvis.Numero);
 
@@ -46,6 +48,8 @@ namespace POO_Alura
             {
                 Console.WriteLine("Erro ao fazer a transferencia, saldo insuficiente: $" + contaKelvis.Saldo);
             }
+
+            Console.WriteLine("Total de contas criadas: " + ContaCorrente.TotalDeContasCriadas);
 
             Console.ReadLine();
         }

@@ -6,10 +6,18 @@ namespace POO_Alura
     public class ContaCorrente
     {
         private double _saldo = 100.00;
-
         public Cliente Titular { get; set; }
         public int Agencia { get; set; }
         public int Numero { get; set; }
+
+        public ContaCorrente(int agencia, int numero, double saldo, Cliente titular)
+        {
+            Agencia = agencia;
+            Numero = numero;
+            Saldo = saldo;
+            Titular = titular;
+        }
+
         public double Saldo
         {
             get { return _saldo; }

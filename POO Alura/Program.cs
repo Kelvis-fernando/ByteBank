@@ -10,19 +10,14 @@ namespace POO_Alura
     {
         static void Main(string[] args)
         {
-            Cliente usuario = new Cliente();
+            Cliente usuario1 = new Cliente("Kelvis", "11917646966", "Desenvolvedor");
+            Cliente usuario2 = new Cliente("Fernando", "12354267899", "Contador");
 
-            usuario.Nome = "Kelvis";
-            usuario.Cpf = "11917646966";
-            usuario.Profissao = "Desenvolvedor";
+            ContaCorrente contaKelvis = new ContaCorrente(864, 987653, 1200.40, usuario1);
+            ContaCorrente contaFernando = new ContaCorrente(864, 0098763, 500.50, usuario2);
+           
 
-            ContaCorrente contaKelvis = new ContaCorrente();
-            ContaCorrente contaFernando = new ContaCorrente();
-            
-            contaKelvis.Titular = usuario;
-            contaKelvis.Numero = 08754;
-            contaKelvis.Agencia = 865;
-            contaKelvis.Saldo = 1500.50;
+            Console.WriteLine("Agencia e conta: " + contaKelvis.Agencia + " " + contaKelvis.Numero);
 
             Console.WriteLine("Usuario: " + contaKelvis.Titular.Nome);
 

@@ -11,13 +11,16 @@ namespace POO_Alura
     {
         static void Main(string[] args)
         {
+            GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
+
             Cliente usuario1 = new Cliente("Kelvis", "11917646966", "Desenvolvedor");
-            Cliente usuario2 = new Cliente("Fernando", "12354267899", "Contador");
-            Cliente usuario3 = new Cliente("Fernando", "12354267899", "Contador");
+            Cliente usuario2 = new Funcionario("Fernando", "12354267899", 2134.45);
+            Diretor diretorCarlos = new Diretor("Carlos", "121324345", 23000.00);
+
+            gerenciador.Registrar(usuario2);
 
             ContaCorrente contaKelvis = new ContaCorrente(864, 987653, 1200.40, usuario1);
             ContaCorrente contaFernando = new ContaCorrente(864, 0098763, 500.50, usuario2);
-            ContaCorrente contaTeste = new ContaCorrente(864, 0098763, 500.50, usuario3);
 
 
             Console.WriteLine("Agencia e conta: " + contaKelvis.Agencia + " " + contaKelvis.Numero);
@@ -53,7 +56,7 @@ namespace POO_Alura
             Console.WriteLine("Total de contas criadas: " + ContaCorrente.TotalDeContasCriadas);
 
             ////////////////////////////////////
-            
+
             Funcionario novoFuncionario = new Funcionario("Joao", "12345678955", 5000.50);
             Console.WriteLine("Bonificacao funcionario: " + novoFuncionario.GetBonificacao());
 

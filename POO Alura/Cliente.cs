@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POO_Alura.Employees;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,11 @@ namespace POO_Alura
             Nome = nome;
             Cpf = cpf;
             Profissao = profissao;
+        }
+
+        public static implicit operator Cliente(Funcionario v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -19,10 +19,5 @@ namespace POO_Alura
             Cpf = cpf;
             Profissao = profissao;
         }
-
-        public static implicit operator Cliente(Funcionario v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

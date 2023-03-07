@@ -23,10 +23,12 @@ namespace POO_Alura
             Designer pedro = new Designer("Pedro", "23243556456", 3000);
             Auxiliar joao = new Auxiliar("Joao", "345667689898", 2000);
             Diretor rafael = new Diretor("Rafaek", "6534545776", 25000);
+            Desenvolvedor kelvis = new Desenvolvedor("Kelvis", "1234355567", 10000.00);
 
             gerenciador.Registrar(pedro);
             gerenciador.Registrar(joao);
             gerenciador.Registrar(rafael);
+            gerenciador.Registrar(kelvis);
 
             Console.WriteLine("Total de bonificacao do mes: " + gerenciador.GetBonificacao());
         }

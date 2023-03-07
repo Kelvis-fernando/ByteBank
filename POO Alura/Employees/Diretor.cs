@@ -15,7 +15,7 @@ namespace POO_Alura.Employees
         // Se eu quiser sobre escrever uma func que e herdada de outra classe, basta dar um virtual na classe pai e override na classe derivada
         public override double GetBonificacao()
         {
-            return Salario + base.GetBonificacao();
+            return Salario *= 1.1;
         }
 
         public override void AumentarSalario()

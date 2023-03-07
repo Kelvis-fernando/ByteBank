@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POO_Alura.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace POO_Alura.Employees
 {
-    public class Diretor : Funcionario
+    public class Diretor : Autenticavel
     {
         public Diretor(string nome, string cpf, double salario) : base(nome, cpf, salario)
         {

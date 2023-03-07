@@ -1,4 +1,5 @@
 ﻿using POO_Alura.Employees;
+using POO_Alura.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,20 @@ namespace POO_Alura
         static void Main(string[] args)
         {
             CalcularBonificacao();
+            UsarPrograma();
 
             Console.ReadLine();
+        }
+
+        public static void UsarPrograma()
+        {
+            Diretor rafael = new Diretor("Rafaek", "6534545776", 25000);
+            rafael.Senha = "123";
+            SistemaInterno.Logar(rafael, "1235");
+
+            Desenvolvedor kelvis = new Desenvolvedor("Kelvis", "1234355567", 10000.00);
+            kelvis.Senha = "987";
+            SistemaInterno.Logar(kelvis, "987");
         }
 
         public static void CalcularBonificacao()

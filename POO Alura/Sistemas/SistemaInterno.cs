@@ -9,7 +9,7 @@ namespace POO_Alura.Sistemas
 {
     public class SistemaInterno
     {
-        public static bool Logar(Autenticavel funcionario, string senha)
+        public static bool Logar(IAutenticavel funcionario, string senha)
         {
             bool usuarioAutenticado = funcionario.Autenticar(senha);
 

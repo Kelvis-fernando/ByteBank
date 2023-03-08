@@ -27,6 +27,10 @@ namespace POO_Alura
             Desenvolvedor kelvis = new Desenvolvedor("Kelvis", "1234355567", 10000.00);
             kelvis.Senha = "987";
             SistemaInterno.Logar(kelvis, "987");
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123";
+            SistemaInterno.Logar(parceiro, "123");
         }
 
         public static void CalcularBonificacao()

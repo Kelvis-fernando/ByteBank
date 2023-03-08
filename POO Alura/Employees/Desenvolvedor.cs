@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace POO_Alura.Employees
 {
-    public class Desenvolvedor : Autenticavel
+    public class Desenvolvedor : FuncionarioAutenticavel
     {
         public Desenvolvedor(string name, string cpf, double salario) : base(name, cpf, salario) { }
 

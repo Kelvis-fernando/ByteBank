@@ -10,6 +10,8 @@ namespace POO_Alura
         public int Agencia { get; set; }
         public int Numero { get; set; }
         public static int TotalDeContasCriadas { get; private set; }
+
+        public static double TaxaOperacao { get; private set; }
         
         public ContaCorrente(int agencia, int numero, double saldo, Cliente titular)
         {
@@ -19,6 +21,8 @@ namespace POO_Alura
             Titular = titular;
 
             TotalDeContasCriadas++;
+
+            TaxaOperacao = 30 / TotalDeContasCriadas;
         }
 
         public double Saldo

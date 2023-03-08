@@ -15,6 +15,11 @@ namespace POO_Alura
             CalcularBonificacao();
             UsarPrograma();
 
+            Cliente cliente =  new Cliente("kelvis", "123343455", "Desenvolvedor");
+            ContaCorrente conta = new ContaCorrente(123, 34546, 8000.00, cliente);
+
+            Console.WriteLine(ContaCorrente.TaxaOperacao);
+
             Console.ReadLine();
         }
 
